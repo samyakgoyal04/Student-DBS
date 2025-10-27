@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student DBMS - Final</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>Student Database Management System</h1>
+      <p class="sub">Mini Project • LocalStorage • Add Edit Delete Clear</p>
+    </header>
+
+    <main class="card">
+      <form id="studentForm" class="form-grid">
+        <input id="name" placeholder="Full name" required>
+        <input id="roll" placeholder="Roll number" required>
+        <select id="year" required>
+          <option value="">Select Year</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+        <input id="cgpa" type="number" step="0.01" min="0" max="10" placeholder="CGPA" required>
+        <input id="course" placeholder="Course" >
+        <div class="form-actions">
+          <button id="addBtn" class="btn primary" type="submit">Add Student</button>
+          <button id="resetBtn" class="btn" type="button">Reset</button>
+        </div>
+      </form>
+
+      <div class="toolbar">
+        <input id="search" placeholder="Search by name or roll">
+        <button id="clearAll" class="btn danger">Clear All</button>
+      </div>
+
+      <div class="table-wrap">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Name</th><th>Roll</th><th>Course</th><th>Year</th><th>CGPA</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="footer">Prepared for AKTU Mini Project • Frontend Only</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
